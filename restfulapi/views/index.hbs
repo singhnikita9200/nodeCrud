@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        crud
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <form action="/students" method="post">
+      <input type="text" id="name" placeholder="name" name="name" value="" />
+      <input type="text" id="email" placeholder="email" name="email" value="" />
+      <input type="text" id="mobile" placeholder="mobile" name="mobile" value="" />
+       <input type="text" id="address" placeholder="address" name="address" value="" />
+      <button>Submit</button>
+      
+    </form>
+
+
+          <h1>Students Table</h1>
+      
+
+       <table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>Action</th>
+  </tr>
+  <tr   {{#each studentsData}}>
+  
+    <td>{{this.name}}</td>
+    <td>{{this.email}}</td>
+    <td>{{this.mobile}}</td>
+    <td>{{this.address}}</td>
+    <td><a action="#" href="/students/{{this._id}}">edit</a>
+    <a action="#" href="/students/{{this._id}}">delete</a>
+    </td>
+   
+  </tr   {{/each}}>
+  <br>
+  
+</table>
+
+    </body>
+</html>

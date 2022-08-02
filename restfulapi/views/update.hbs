@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        crud
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        {{_id}}
+    <form action="/students/{{_id}}" method="post">
+      <input type="text" id="name" placeholder="name" name="name" value="{{name}}" />
+      <input type="text" id="email" placeholder="email" name="email" value="{{email}}" />
+      <input type="text" id="mobile" placeholder="mobile" name="mobile" value="{{mobile}}" />
+       <input type="text" id="address" placeholder="address" name="address" value="{{address}}" />
+     
+      <button>Update</button>
+    </form>
+    </body>
+</html>
